@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>On the way to earth.</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <!-- Mapbox (background) -->
+      <div id="map"></div>
+
+      <!-- Current destination stats (bottom left) -->
+      <ul class="current__destination" id="current-destination">
+        <li>
+          <p class="label">Destination</p>
+          <p class="value" id="current_destination">Kennedy Space Center</p>
+        </li>
+        <li>
+          <p class="label">Distance</p>
+          <p class="value" id="current_distance">10,000km</p>
+        </li>
+        <li>
+          <p class="label">Duration</p>
+          <p class="value" id="current_duration">12h 45min</p>
+        </li>
+      </ul>
+
+      <!-- Selected destination overview (top left) -->
+      <ul class="selection__overview container" id="selection_overview">
+        <header>
+          <div class="subheader">
+            <p>LANDING SITE OVERVIEW</p>
+            <button class="close" id="btn_close">
+              <img src="./images/close.svg"/>
+            </button>
+          </div>
+          <div class="title">
+            <h3>Kennedy Space Center</h3>
+            <button class="text" id="btn_set_destination">Set destination</button>
+          </div>
+        </header>
+        <li>
+          <p class="label">Loaction</p>
+          <p class="value" id="selection_location">Merrit Island, FL</p>
+        </li>
+        <li>
+          <p class="label">Distance</p>
+          <p class="value" id="selection_distance">24,580km</p>
+        </li>
+        <li>
+          <p class="label">Distance</p>
+          <p class="value" id="selection_duration">12h 45min</p>
+        </li>
+        <div class="alert success" id="alert">
+
+          <p id="alert_text">This is our success message.</p>
+        </div>
+      </ul>
+
+      <!-- Map legend/key -->
+      <ul class="map__legend container">
+        <li>
+          <div class="dot blue"></div>
+          <p class="value">🛬 Available landing facilites</div>
+        </li>
+        <li>
+          <div class="dot white"></div>
+          <p class="value">🚀 Current ISS position</div>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>
